@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory
 import android.os.Looper
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.lifecycle.Lifecycle
 import com.google.api.services.vision.v1.model.LatLng
 import com.travels.searchtravels.VisionApiTest.TestListener.EventType
 import com.travels.searchtravels.activity.MainActivity
@@ -49,6 +50,7 @@ class VisionApiTest {
     @Before
     fun startUp() {
         scenario = ActivityScenario.launch(MainActivity::class.java)
+        scenario.moveToState(Lifecycle.State.CREATED)
     }
 
     @Test

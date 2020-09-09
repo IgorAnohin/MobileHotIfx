@@ -8,6 +8,7 @@ import androidx.test.core.app.ActivityScenario.launch
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.travels.searchtravels.activity.ChipActivity
 import org.junit.Assert.assertEquals
+import androidx.lifecycle.Lifecycle
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -30,6 +31,7 @@ class PriceApiTest {
     @Before
     fun startUp() {
         scenario = launch(ChipActivity::class.java)
+        scenario.moveToState(Lifecycle.State.CREATED)
         eventLatch = CountDownLatch(1)
         priceChangeHistory = ArrayList()
     }
