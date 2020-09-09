@@ -1,7 +1,30 @@
-# HotFix.-Mobile
+# Хакатон "Вездекод" от ВКонтакте
 
-# Токен для запуска тестов.
-## Для того, чтобы тесты работали хорошо, нужно заменить значение переменной `VALID_GOOGLE_TOKEN` в файле [app/src/test/java/com/travels/searchtravels/VisionApiTest.kt](app/src/test/java/com/travels/searchtravels/VisionApiTest.kt).
-### Для того, чтобы получить ТОКЕН, можно воспользоваться следующими ссылками
-* https://cloud.google.com/vision/product-search/docs/auth
-* https://cloud.google.com/sdk/docs/downloads-apt-get#interactive
+## Этап: Хотфикс.Мобайл
+
+## Команда: Bepis
+
+Ссылка на задание: [ссылка](https://vk.com/@tech-task-hotfix-mobile)
+
+В данном репозитории Вы можете наблюдать подготовленные тесты для приложения _Aeropic_.
+
+---
+
+## Требования для запуска
+
+### 1. Установка токена Cloud Vision API 
+
+Для корректного запуска большОй части тестов требуется, чтобы был установлен актуальный токен авторизации в сервисе Cloud Vision API.
+
+Чтобы установить токен авторизации, необходимо в файле **[VisionApiTest.kt](https://github.com/IgorAnohin/HotFix.-Mobile/blob/master/VisionApiTest.kt)** установить в качестве значения переменной `VALID_GOOGLE_TOKEN` содежимое токена.
+
+P.S. Дополнительную информацию о том, как получить токен авторизации в Cloud Vision API можно получить по ссылке:<br/>
+https://cloud.google.com/vision/product-search/docs/auth
+
+**P.P.S. За актуальным токеном также можно обратиться к [Михаилу Гостеву](https://vk.com/mihun4ik)**
+
+### 2. Перемещение тестов в директорию с тестами
+
+Файлы _PriceApiTest.kt_ и _VisionApiTest.kt_ необходимо поместить в директорию с тестами. Следует класть тесты в пакет `com.travels.searchtravels`.
+
+В качестве проекта можно использовать шаблон проекта, предоставленный организаторами. Скачать его можно по ссылке: [ссылка на скачивание](https://drive.google.com/file/d/1KFsGAwXHKYmLPVbLknw3THjczu84slJg/edit). Помещать вышеупомянутые файлы следует рядом с тестами-образцами.
